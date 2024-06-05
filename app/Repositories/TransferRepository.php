@@ -36,8 +36,7 @@
                 throw new InsufficientBalanceOnWalletException();
             }
 
-            //http request para serviço https://util.devi.tools/api/v2/authorize
-            if (!$this->isAuthorizedByMock()) {
+            if (!$this->isAuthorizedByMock()) { //http request para serviço https://util.devi.tools/api/v2/authorize
                 throw new AuthMockException();
             }
 
@@ -67,14 +66,11 @@
                         throw new AuthMockException();
                     } else {
                         try {
-                            $payerUserData = User::findOrFail($payerWallet->user_id);
-                            $payeeUserData = User::findOrFail($payeeWallet->user_id);
-                            $this->sendTransferEmail->sendTransferEmail($payerUserData, $payeeUserData, $data['value']);
+                            $this->sendTransferEmail->sendTransferEmail($payerWallet->user, $payeeWallet->user, $data['value']);
                         } catch (\Exception $exception) {
                             response()->json(["Error" => $exception]);
                         }
                     }
-
                     return $transfer;
                 });
             } catch (\Exception $e) {
