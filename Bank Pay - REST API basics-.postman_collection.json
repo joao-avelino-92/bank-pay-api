@@ -1,0 +1,472 @@
+{
+	"info": {
+		"_postman_id": "6608db5e-4551-4d8e-81d1-5885f531ef99",
+		"name": "Bank Pay - REST API basics:",
+		"description": "# 🚀 Get started here\n\nThis template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT request.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Scripts\" tab**\n\nAdding tests to your requests can help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/fa30ea0a-373d-4545-a668-e7b283cca343/aW1hZ2UucG5n\" alt=\"\" height=\"1530\" width=\"2162\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n    \n- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) to verify if the API works as expected and execute workflows.\n    \n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12527366",
+		"_collection_link": "https://blue-satellite-272546.postman.co/workspace/Cia.-do-Credito~80dcaf49-370b-4031-83b3-05275509f462/collection/12527366-6608db5e-4551-4d8e-81d1-5885f531ef99?action=share&source=collection_link&creator=12527366"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "getUsersById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNDExZWU3Yzg2MjNmYzZkZGVkYjA0NDNlOTNjYTg4MTUxOWU5M2ViOTdhMjQ5Yjg2YWIyMmU0MGRiMmUzNmQ5ZjEzODFjYzk5OGQyNTdiZDAiLCJpYXQiOjE3MTcxMDk3OTAuMjU0MTIxLCJuYmYiOjE3MTcxMDk3OTAuMjU0MTIzLCJleHAiOjE3NDg2NDU3OTAuMjM5MDI1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.p_c12jqPtlkfYREKiy5FpbY3VYLq0xBuD117d1lf88QettLGTTtRRGN_hpzQqjUxgdlMdV4yxLvDoFbOCpDfrkgS17ksvL8HNa8acrX_roIU_RTLfDp0eDNANMf5EOnCuopvMQSVR9iZy3Uork2wTEUWPxkgO0yOtL7s9R87peDuEqFOuBUWUrWWmstOeY7wGEYhDL4EMUStDYL4JVtG4H0zAsrbt4AAcOjQy4_VBFKNuT3jMDtBcF1svFETNlxSNBhjWgWVjvuIKAV_4KzzTGJHvbHuPtQ0RDKzNiXje8ftN2rf-6pEidWaFQffGqdbx-QXtmPjnXxkLru6U3xNQGA1RNceLpgBnVAGIn0kJnfLcuw8_RyOjGQNLvrTt1C4r1OzADhQljK_xgKdmVA-LrT68G9D8fIG_sbm7mQ_AwdktoPZ9l0eN_4DjiXunX2DYIhymYavYcCMze2jbQx9Ci4VruRze6jMmaYc2mYWgvczbIaWkscx3V9MwCLHWzZJFjAOy7NVkjYtv-yhXGKpW5u3FPqNtLwsjH7d2TYkGn6cGt3CNFRqI2ToRd-n5ABksiFdNuw8ndpGI_AIi-BuZJ17Y7Xdkr0xRhopZiKQ5cSADyfDr5CKM-vIEgVZv2IqW12KVjHfvmfF_dp1kEy2fy_NxsGtDou6FXo3CdXMay8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUsers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNDExZWU3Yzg2MjNmYzZkZGVkYjA0NDNlOTNjYTg4MTUxOWU5M2ViOTdhMjQ5Yjg2YWIyMmU0MGRiMmUzNmQ5ZjEzODFjYzk5OGQyNTdiZDAiLCJpYXQiOjE3MTcxMDk3OTAuMjU0MTIxLCJuYmYiOjE3MTcxMDk3OTAuMjU0MTIzLCJleHAiOjE3NDg2NDU3OTAuMjM5MDI1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.p_c12jqPtlkfYREKiy5FpbY3VYLq0xBuD117d1lf88QettLGTTtRRGN_hpzQqjUxgdlMdV4yxLvDoFbOCpDfrkgS17ksvL8HNa8acrX_roIU_RTLfDp0eDNANMf5EOnCuopvMQSVR9iZy3Uork2wTEUWPxkgO0yOtL7s9R87peDuEqFOuBUWUrWWmstOeY7wGEYhDL4EMUStDYL4JVtG4H0zAsrbt4AAcOjQy4_VBFKNuT3jMDtBcF1svFETNlxSNBhjWgWVjvuIKAV_4KzzTGJHvbHuPtQ0RDKzNiXje8ftN2rf-6pEidWaFQffGqdbx-QXtmPjnXxkLru6U3xNQGA1RNceLpgBnVAGIn0kJnfLcuw8_RyOjGQNLvrTt1C4r1OzADhQljK_xgKdmVA-LrT68G9D8fIG_sbm7mQ_AwdktoPZ9l0eN_4DjiXunX2DYIhymYavYcCMze2jbQx9Ci4VruRze6jMmaYc2mYWgvczbIaWkscx3V9MwCLHWzZJFjAOy7NVkjYtv-yhXGKpW5u3FPqNtLwsjH7d2TYkGn6cGt3CNFRqI2ToRd-n5ABksiFdNuw8ndpGI_AIi-BuZJ17Y7Xdkr0xRhopZiKQ5cSADyfDr5CKM-vIEgVZv2IqW12KVjHfvmfF_dp1kEy2fy_NxsGtDou6FXo3CdXMay8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getInfoWithToken",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiM2UxN2E2MTgwMGUyYjIxZmI5YjA3MDg0NzI2MDY5MTVjNzNlYzUwMDgxMDkxOGVhMGIwOGEyZTY3OTUyNDA1ZWQ1N2I4MTk4NmEyYTRhNTIiLCJpYXQiOjE3MTcxNTgxNzQuNjUyOTAxLCJuYmYiOjE3MTcxNTgxNzQuNjUyOTAzLCJleHAiOjE3NDg2OTQxNzQuNDg3MTQ3LCJzdWIiOiIyM2Q4ZDNmOS03MjJlLTMzNzEtYWMzYS0wMGVkMGI1OWEwNjYiLCJzY29wZXMiOltdfQ.zLmH1DDm2CaDnU2AZX3ILCObwfob2Y7-ECmhNoMFXkT5fhFy-OiyX616Poe_28yml-HCF-VBEXnASVXCWMCigrHA5UQskQcHYexCxMSRwyaDCPJynsz6YlS4qLVKRtWjDFcWoEEJQxzAVw_zPxbWOc375PSkrfHemSF5c4ndik-2JOXuRzC0vGZ7-v4InFHKvYxKcprIRWF9dTRN6AyGtk8cs--ERl8z-Qc2W0N-qAby6Q9K9hEiQwCZAQqg8IVWFY1J6JSiQK2ujZuzVikaR-eNnpmiZ6-ze8UTIzICAO7-X75YnErCzl_bwWv06dm4huSSKyALJA8JWOvhhWMDOaAaBdb2ZtOyacwbmopecU7vtqT8d6_OlYQ6qlrj9hoEmZU13qX_YsDzhM4E2BfkloPxvCsjY2V26LqG-1DkFKxuK-6IFm8HzLrWTh4TigOxEi051QXUid4B6-ltykieMomf8MeLWH1QDdgxwpPeS5l129n5owm6k0WlmJiLZgBJoNcmI7ukfyuK0B9VyaDAHIUvca1LQl0QWg9dU0BDQsAD28l9P7PH3zbRBTHnm2TuLQkWDpsabFni34gtkRoFUKNxwd1JzAJ28BvblNougBQGjGgbnOFr8SsajUc0PxffJc9ASQ_i73D5G_gXy8M-9kyQC8ILXx-5r1ydfJUEanM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/user/info/account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"info",
+								"account"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "WalletTransaction",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiYTI4YmIyZjI0N2U2MGE4NDE3MGY0ZTUyYzk5MjZiMGZjYzlmYmI2Mzc3M2FlMmQ1MjUxYzVkNDg3NzVjOTJjNTFkM2ZmMzFmOGY1OWIxMzQiLCJpYXQiOjE3MTcxMDgzNDEuMjUyNzg0LCJuYmYiOjE3MTcxMDgzNDEuMjUyNzg2LCJleHAiOjE3NDg2NDQzNDEuMjM4NTQzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.bBEnz0eB-rsaKfuK45_NAJttF-8ppaVJf4l3ZFi94lF7L2RLXjQ2rp0FTfy9IiKNHM9ozUASjlKvtTNVxFmzIp3ExkeN0OgMIq9Fubbdos5tYNTSTvcmtAXjACNj9Jd0zpTdlMSJHtOqQV9iPWFDFjKu6GMtBXsPRbvTbUDKD227LoUY9Yqh2hj1xy1oINxpBTB9Dr1oB5YYuMix25STLzDZ7L8yPJ11quS1CTBPtVM8gEs67GQ5AWXcALVIVZXXm24fP7iClAZ0zzG8-J2J-Ti-NzYRMVRns4PAcU7NztIFHzVu1NPCxQ29vphWUlFNcW5EK-UfoXEhcvl4tmi734HNhA9R8SPTrPXhBtGwNzFwQ9gGcpFbGc7VStCE9HezTKr1DNyQCcaEmriEtFPEtZVJPqAyqeOMraxUwlM1YQjEG9XRm79FukQlCPcsL7vFGYl7mDTvHrdQqQJ_dDGfT0MGimkpoZJDUCVXF3zUoRS_xrqxXWiZPpLujpH6CqLvCV4rJ5wIPq5JoIBdoSDuCjU9iWHeMF9wtsPsNz0Dq4pTM78bBz8avEyNbUcVv-Fv-UtLYXNQhIu18tevHCwQzTurR0e9G_KKbCM3qMCEU6VZ-j11H1hadlrpixztBi3XrmvhnkneeqEczH7dn33ElpU4d5Bph8QsykKU3kVnmts",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"provider\": \"user\",\r\n\"value\": 100.0,\r\n\"sender_wallet_id\": 1,\r\n\"recipient_wallet_id\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/transfer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"transfer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Wallet",
+			"item": [
+				{
+					"name": "getAllWallets",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiM2UxN2E2MTgwMGUyYjIxZmI5YjA3MDg0NzI2MDY5MTVjNzNlYzUwMDgxMDkxOGVhMGIwOGEyZTY3OTUyNDA1ZWQ1N2I4MTk4NmEyYTRhNTIiLCJpYXQiOjE3MTcxNTgxNzQuNjUyOTAxLCJuYmYiOjE3MTcxNTgxNzQuNjUyOTAzLCJleHAiOjE3NDg2OTQxNzQuNDg3MTQ3LCJzdWIiOiIyM2Q4ZDNmOS03MjJlLTMzNzEtYWMzYS0wMGVkMGI1OWEwNjYiLCJzY29wZXMiOltdfQ.zLmH1DDm2CaDnU2AZX3ILCObwfob2Y7-ECmhNoMFXkT5fhFy-OiyX616Poe_28yml-HCF-VBEXnASVXCWMCigrHA5UQskQcHYexCxMSRwyaDCPJynsz6YlS4qLVKRtWjDFcWoEEJQxzAVw_zPxbWOc375PSkrfHemSF5c4ndik-2JOXuRzC0vGZ7-v4InFHKvYxKcprIRWF9dTRN6AyGtk8cs--ERl8z-Qc2W0N-qAby6Q9K9hEiQwCZAQqg8IVWFY1J6JSiQK2ujZuzVikaR-eNnpmiZ6-ze8UTIzICAO7-X75YnErCzl_bwWv06dm4huSSKyALJA8JWOvhhWMDOaAaBdb2ZtOyacwbmopecU7vtqT8d6_OlYQ6qlrj9hoEmZU13qX_YsDzhM4E2BfkloPxvCsjY2V26LqG-1DkFKxuK-6IFm8HzLrWTh4TigOxEi051QXUid4B6-ltykieMomf8MeLWH1QDdgxwpPeS5l129n5owm6k0WlmJiLZgBJoNcmI7ukfyuK0B9VyaDAHIUvca1LQl0QWg9dU0BDQsAD28l9P7PH3zbRBTHnm2TuLQkWDpsabFni34gtkRoFUKNxwd1JzAJ28BvblNougBQGjGgbnOFr8SsajUc0PxffJc9ASQ_i73D5G_gXy8M-9kyQC8ILXx-5r1ydfJUEanM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/wallet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"wallet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiM2UxN2E2MTgwMGUyYjIxZmI5YjA3MDg0NzI2MDY5MTVjNzNlYzUwMDgxMDkxOGVhMGIwOGEyZTY3OTUyNDA1ZWQ1N2I4MTk4NmEyYTRhNTIiLCJpYXQiOjE3MTcxNTgxNzQuNjUyOTAxLCJuYmYiOjE3MTcxNTgxNzQuNjUyOTAzLCJleHAiOjE3NDg2OTQxNzQuNDg3MTQ3LCJzdWIiOiIyM2Q4ZDNmOS03MjJlLTMzNzEtYWMzYS0wMGVkMGI1OWEwNjYiLCJzY29wZXMiOltdfQ.zLmH1DDm2CaDnU2AZX3ILCObwfob2Y7-ECmhNoMFXkT5fhFy-OiyX616Poe_28yml-HCF-VBEXnASVXCWMCigrHA5UQskQcHYexCxMSRwyaDCPJynsz6YlS4qLVKRtWjDFcWoEEJQxzAVw_zPxbWOc375PSkrfHemSF5c4ndik-2JOXuRzC0vGZ7-v4InFHKvYxKcprIRWF9dTRN6AyGtk8cs--ERl8z-Qc2W0N-qAby6Q9K9hEiQwCZAQqg8IVWFY1J6JSiQK2ujZuzVikaR-eNnpmiZ6-ze8UTIzICAO7-X75YnErCzl_bwWv06dm4huSSKyALJA8JWOvhhWMDOaAaBdb2ZtOyacwbmopecU7vtqT8d6_OlYQ6qlrj9hoEmZU13qX_YsDzhM4E2BfkloPxvCsjY2V26LqG-1DkFKxuK-6IFm8HzLrWTh4TigOxEi051QXUid4B6-ltykieMomf8MeLWH1QDdgxwpPeS5l129n5owm6k0WlmJiLZgBJoNcmI7ukfyuK0B9VyaDAHIUvca1LQl0QWg9dU0BDQsAD28l9P7PH3zbRBTHnm2TuLQkWDpsabFni34gtkRoFUKNxwd1JzAJ28BvblNougBQGjGgbnOFr8SsajUc0PxffJc9ASQ_i73D5G_gXy8M-9kyQC8ILXx-5r1ydfJUEanM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/wallet/022153b3-a5d9-49b6-8edd-ecedd809131c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"wallet",
+								"022153b3-a5d9-49b6-8edd-ecedd809131c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Wallet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZmMyZTc4NzgxNTc4MmM1ZjYxNzQ1NjcyOGM1MzllODJmZGYyOWE1MTM5MGE2NzQ4ZDY3ODFkMGM3ZjAwYmQ2OGIwNTU4NjkyZjNkYzQzYmMiLCJpYXQiOjE3MTc1NTMzODAuNTYxNzc0LCJuYmYiOjE3MTc1NTMzODAuNTYxNzc1LCJleHAiOjE3NDkwODkzODAuNTQ4NTM0LCJzdWIiOiIyOSIsInNjb3BlcyI6W119.YpLbjUfV5CkNotjCTKKMVWPuRlAfpCvNWkuUlZ6cSOx-IOXGHFWaP8ilQfc8_bxJqpSOoc8VlFaCTIqKS9p-DtPZlZvLcWZK3GCck2ZDRgy4TEC3Zm_iI2qJ1u2_CTK2EAj4DInwGqNsxMDk3V0p-Kx2mvvExMrQlPu9XL2NAoOf-YX9JQejWboxI717AGGiVVzZ2MewfmbCCiaqUc83xC6K-gCckHtpiXZdd7mKdlvGXT2lHXgC1dS7ZfPRQqo-j6nYGGD11aEuAqv59cu9caI7TGN5gIsn4O6qRJlenbgK1fsPQ20v1tTzr0aOtlaHibGGePKtg71Z-XfxuQrh1_RGtqWfmS7l72LmrgKsvP_Jv2okjRrb7IidHt2_TyH4ejPHHGyi4l0nFgz7AHkS-VxC9-vyGiGpJPIvZVkQLF7dgjE59jkFQK62zsfP3vtVTNzVAV6XoMfBuFVOAJZ70vpbM9NApeXL3BULkEXOaTi9UxSSkAfBHHx1vVk7toREQfFZcKEMmi6YObN1bWN0EtNrjtcQYIaKnKs4eUDHsE4KsuiVKuo_-OSQXhkQU8MuStQ5uMTgTkt6hyJ7Shb--WLzV9i2qEL1aHokOAL4M75i-KphFlWqSEgqOZZfSjdGiDzwDpWCFBLUeuo00WNOZqf9bzhJ8NaEOL2ue0Jn2LI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"29ca88c8-93f0-347d-8a64-6506474e71a5\",\r\n    \"balance\": 888.99\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/wallet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"wallet"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transfer",
+			"item": [
+				{
+					"name": "PostTransfer - (Trader)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDljMWE5NzBlNDg1NDQ4ZWZmNTk5NGM2ZTlmZGM2NzVkMWQ2MmNiZGUyY2Q3MzUxN2VkMjhhMTYzMDRjYTljMmNhZWExYTYyNGUzM2IzN2MiLCJpYXQiOjE3MTc1NTQzNTguNTA4ODM4LCJuYmYiOjE3MTc1NTQzNTguNTA4ODQsImV4cCI6MTc0OTA5MDM1OC40OTU2NjEsInN1YiI6IjAwYzc1OTVmLTA4ZjgtMzRmOS04MmYzLTQ0NzAzZmQ3NzcxNCIsInNjb3BlcyI6W119.xWwrapvE5sHg-Dh9_0cdbOsw1E0-LpZz_0DxrUDAKsMrpRYybZKGMyU_Zc_rtUB8Ar1FKbUy-ZmmoO4N8wFYQB7GgLw8Knr0ofiIzCStkSEBSvIrOFrnjInICyjA_mZdyl1PbW69EQONJW5Q12xTIPw0sNu5SlZu72f-lsmnWA8_E4DnJVO9D5_k80cHVdaC2L7pyH83jJAP91tNzt8ap8ZNBLu4BN_jvFZqM_iX-f5wbvcFBaUeRiFLifTnP4Dz56YQ2F6xJXgnyQS-aQjDCuR_y82-S8HaZq3pYnpmtboMQJQ8Y6B-W-7X5CjqJjGms5ka9p2PqUyEuRPaOO3Pa84EuDL7Na62iYYjSA-xSlvfmiIOLb6ayRtgTrO99UdvBzgSv1NO4Z8Jjx3q-onsCewbF01xL075feQ_hPNCs82D9OZqgxAjAIR8FKGMGHjjwWYQPix9aVQ_9Xzf1it6wl9m_yls71Q5Ecbu9F1BiDs3i_qL9yvwwnR7WXcy0f3DJJrpFS_vw5t1Arj1YU4LxS9oNRLZtrnDWoTuZe4QuXF9o698k2m7EX253vhlr7ZWcZPByjLvebLAJVtGyZod20Mdlqb8Rl9z3HpKB6OGmNMGc76adJ7dUT5gDKrGKSLDZkp0mzOIYQYC-d0JYD5riOANrnIpdt9zQ_RJ29ceLuk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"payer_wallet_id\": \"6e645e13-434a-4c3a-bab8-20f5a4349e90\",\r\n    \"payee_wallet_id\": \"373b4827-8882-471b-ae8b-ed00ceb312b5\",\r\n    \"value\": \"1.00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/transfer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"transfer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostTransfer (User)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYWYwMzY2NDBhMGFmMzIzM2UwN2Q5MThkYWVkMjdkYTQ5ZWE2ZTZhYmYxMDIxNWY2NDViYWZkYmQ5OTZmZDg2M2MwYjM2MjNlMGY3NDliZGEiLCJpYXQiOjE3MTc1NTc0NjcuMTEyOTc2LCJuYmYiOjE3MTc1NTc0NjcuMTEyOTc3LCJleHAiOjE3NDkwOTM0NjcuMDk4ODA1LCJzdWIiOiIwMGM3NTk1Zi0wOGY4LTM0ZjktODJmMy00NDcwM2ZkNzc3MTQiLCJzY29wZXMiOltdfQ.i3zJ4k-as2vBZEwpirSjenF07i4vIgSM_ZoujnwYd4CnN_odwwf2k1VgB2W6ataQaFzsWGDqhZeKUo89Du71RQqbISdZMBMoq70HtoMpCtOMp9TxqJHp1Uv9ci_idiU8O8eGiChg6oHfLB_mTsY8qqub34RldgjxS8fmu4XsDSV22KEZ0lBt8OfRnN0UmD0HWV1u7VR7DbFqxXbdjjWriXO5UaKWed9LXQUmF-4c21YnJPpqtJewjFx1SUkgDjZxlV3BrHA8Udej07FoEOQJ9rm_D1BgcPYiMQnfOR2Ypltmh7RodkOeH1WGC0S6rqAsQAposipU6lQrFOljuLu6krCCjU3GoFG5W3aIQX2FfJGOYm9AWfaNGbn7wqRcmvr8T_9Hf3aXAKF68_THaJLC6y2q0FqOCtwO2lfiLp4_i7-1A88KPa_KbEAh5ai_TwwzGgPh7lYhibiMgDMWJU6Wh7pSqTqrijrqTI_MD1ueCIZXE8HKe3a3fRe14WYaZftNqwB8klTkUCFaEjMn4PvtCuxK1LjRHmDF7RBr-sRJJ2hSu-5nyUa80GU8zS8zIfWTzm8uFT8ISlQN-XUaku0AGEmA5lZjRhBdJjPHW1LTHAUoHzJFRbStaZWzd8ZKRK92o4LcsIhMHx8i-pY_R3Vd5EMM8O_4yUXvmgAa6raFoIY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"payer_wallet_id\": \"d76eedb2-2651-4d80-a416-b060d59d6b2c\",\r\n    \"payee_wallet_id\": \"373b4827-8882-471b-ae8b-ed00ceb312b5\",\r\n    \"value\": \"1.00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/transfer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"transfer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Login - User type trader",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"sromaguera@example.net\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/login/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"login",
+								"user"
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "Login - User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"sromaguera@example.net\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/login/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"login",
+								"user"
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SendEmail",
+			"item": [
+				{
+					"name": "sendEmailTest",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "https://postman-rest-api-learner.glitch.me/"
+		}
+	]
+}
