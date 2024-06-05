@@ -24,7 +24,7 @@
                 });
 
                 //send to Payee
-                Mail::send('email.transfer.payee', [$transferDataArray], function (Message $message) use ($transferDataArray) {
+                Mail::send('email.transfer.payee', ['transferDataArray' => $transferDataArray], function (Message $message) use ($transferDataArray) {
                     $message->to($transferDataArray['payeeEmail'], $transferDataArray['payeeName'])
                             ->from('joaoavnt@gmail.com', 'digital-bank-api')
                             ->subject('Hi, you receive a transfer on digital-bank-api!');
