@@ -96,7 +96,7 @@
             return false;
         }
         private function isServiceAbleToSendNotifications(): bool {
-            $notififierService = $this->authMock->verifyMockAuth();
+            $notififierService = $this->notificationMock->verifyMockNotification();
 //            if (is_object($notififierService) && $notififierService->get('status') == 'success'){
             return true;
 //            } else {

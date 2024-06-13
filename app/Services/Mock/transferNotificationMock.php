@@ -8,7 +8,7 @@
     use GuzzleHttp\Exception\GuzzleException;
 
     class transferNotificationMock {
-        public function verifyMockAuth() {
+        public function verifyMockNotification() {
 
             $client = new Client();
 

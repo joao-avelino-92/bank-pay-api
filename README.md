@@ -4,6 +4,8 @@ Comandos para Executar o projeto:
 
 composer install
 
+Criar o banco de dados
+
 php artisan migrate
 
 php artisan db:seed
